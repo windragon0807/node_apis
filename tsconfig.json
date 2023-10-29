@@ -1,0 +1,31 @@
+{
+  "compilerOptions": {
+    "lib": ["es2017"],
+    "target": "ES2022",
+    "module": "CommonJS",
+    "typeRoots": ["node_modules/@types"],
+    "moduleResolution": "node",
+    "rootDir": "./src",
+    "outDir": "./dist",
+    "strict": true,
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
+    "resolveJsonModule": true,
+    "allowSyntheticDefaultImports": true,
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true,
+    "importHelpers": true,
+    "baseUrl": "./src",
+    "paths": {
+      "@/*": ["*"],
+    }
+  },
+  // 어디에 있는 파일을 컴파일 할 것인지
+  "include": ["./src/index.ts", "./src/**/*.ts", "./src/**/*.json", ".env"],
+  // 컴파일에서 제외되는 파일들
+  "exclude": [
+    "node_modules",
+    "**/*.spec.ts",
+  ]
+}
