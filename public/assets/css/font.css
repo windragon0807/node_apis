@@ -5,3 +5,5 @@
   src: url(https://port-0-node-apis-12fhqa2llocvg4zp.sel5.cloudtype.app/api/font) format('woff');
   unicode-range: U+0041-005A, U+0061-007A, U+AC00-D7A3, U+0030-0039, U+0020-002F, U+003A-0040, U+005B-0060, U+007B-007E;
 }
+
+/* 폰트 css의 경우, font-face 자체를 정의하고 url에 다운로드 링크를 넣어서 보내는 방법을 이용하자. */

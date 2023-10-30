@@ -4,3 +4,5 @@ parentDivs.forEach((parentDiv) => {
   parentDiv.appendChild(newDiv);
   newDiv.classList.add("CodeBlock_left");
 });
+
+// 자바스크립트 파일 다운로드의 경우, <link>가 아닌 <script>를 사용하며, 렌더링 된 이후에 참조해야 하므로 body의 맨 마지막에 위치시키자.
