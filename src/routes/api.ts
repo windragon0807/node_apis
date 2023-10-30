@@ -18,7 +18,7 @@ router.get("/css", (_, res: Response) => {
   res.send(output);
 });
 
-const fontPath = path.join(process.cwd(), "/public/assets/fonts/MapleStory.woff");
+const fontPath = path.join(process.cwd(), "/public/assets/fonts/Maplestory.woff");
 const font = fs.readFileSync(fontPath);
 router.get("/font", (_, res: Response) => {
   res.set("Content-Type", "application/octet-stream");
