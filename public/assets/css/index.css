@@ -1,0 +1,23 @@
+/* 배경화면 */
+.notion-frame
+{
+  background-color: transparent !important;
+}
+
+/* 화면 등장 fadeUp 애니메이션 */
+@keyframes fadeUp {
+  from {
+    transform: translateY(50px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+.notion-frame > .notion-scroller {
+  transform: translateY(50px);
+  opacity: 0;
+  animation: 400ms ease fadeUp;
+  animation-fill-mode: forwards;
+}

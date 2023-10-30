@@ -1,169 +1,6 @@
-/* 갤러리 그룹화 요소 */
-.notion-gallery-view
-> div
-> :nth-child(2)
-{
-  padding-bottom: 5px !important;
-}
-
-/* 페이지 블럭 */
-.notion-page-block
-> a[rel="noopener noreferrer"]
-{
-  background: transparent !important;
-}
-.notion-page-block
-> a[rel="noopener noreferrer"]
-> div[role="button"]:hover
-{
-  /* 기존 페이지 hover 효과 삭제 */
-  background: transparent !important;
-}
-.notion-page-block
-> a[rel="noopener noreferrer"]
-> div
-> div[style*="display:flex;align-items:center"]
-> div
-{
-  padding: 7px 15px !important;
-  border: 2px solid transparent;
-  border-radius: 15px !important;
-  background:
-    linear-gradient(90deg, rgba(255, 255, 255, 0.95), rgba(255, 255, 255, 0.95)) padding-box,
-    linear-gradient(90deg, #FDDE5C, #F8AB5E, #F56A62, #A176C8, #759BEB, #65BEB3, #70DB96) border-box
-    !important;
-  filter: drop-shadow(0px 3px 3px rgba(0, 0, 0, 0.15));
-  margin-bottom: 10px !important;
-}
-.notion-page-block
-> a[rel="noopener noreferrer"]
-> div
-> div[style*="display:flex;align-items:center"]
-> div:hover
-{
-  animation: bgAnim 3s ease-out infinite !important;
-}
-.notion-page-block
-> a[rel="noopener noreferrer"]
-> div
-> div[style*="display:flex;align-items:center"]
-> div
-> div
-{
-  gap: 3px !important;
-  height: 100% !important;
-}
-.notion-page-block
-> a[rel="noopener noreferrer"]
-> div
-> div[style*="display:flex;align-items:center"]
-> div
-> div
-> :nth-child(2)
-{
-  /* 페이지 텍스트에 있던 밑줄 삭제 */
-  border: none !important;
-}
-
-/* 페이지 커버 */
-.page_cover
-{
-  height: calc(30vh + 45px) !important;
-}
-
-/* 상단 sticky 헤더 */
-.notion-header
-{
-  /* fixed = absolute + sticky */
-  position: fixed !important;
-  width: 90% !important;
-  align-self: center !important;
-  top: 15px !important;
-  border-radius: 20px !important;
-  filter: drop-shadow(0px 6px 5px rgba(0, 0, 0, 0.15));
-  box-shadow: inset 0px -12px 30px rgba(255, 255, 255, 0.8),
-    inset 0px -5px 20px rgba(0, 0, 0, 0.25);
-  background: rgba(255, 255, 255, 0.75);
-}
-.notion-topbar
-{
-  border-radius: 20px !important;
-}
-.scroll-progress-bar
-{
-  display: none;
-}
-
-/* 페이지 아이콘 */
-.page-icon img
-{
-  border-radius: 15px !important;
-}
-/* 제목 1, 2, 3 텍스트 그림자 */
-div[class*="header-block"]
-{
-  margin-top: 15px !important;
-  margin-bottom: 10px !important;
-}
-div[class*="header-block"] h2,
-div[class*="header-block"] h3,
-div[class*="header-block"] h4
-{
-  text-shadow: 8px 5px 4px rgb(204 204 204 / 90%);
-}
-
-/* 콜아웃 */
-.notion-callout-block
-{
-  border: 2px solid transparent;
-  border-radius: 15px !important;
-  background:
-    linear-gradient(90deg, rgba(255, 255, 255, 0.95), rgba(255, 255, 255, 0.95)) padding-box,
-    linear-gradient(90deg, #FDDE5C, #F8AB5E, #F56A62, #A176C8, #759BEB, #65BEB3, #70DB96) border-box
-    !important;
-  filter: drop-shadow(0px 3px 3px rgba(0, 0, 0, 0.15));
-  margin-bottom: 10px !important;
-}
-.notion-callout-block *
-{
-  background-color: transparent !important;
-}
-
-/* 배경화면 */
-.notion-frame
-{
-  background-color: transparent !important;
-}
-
-/* 페이지 타이틀 */
-@keyframes textAnim
-{
-  0% { background-position: 0 50%; }
-  50% { background-position: 100% 50%; }
-  100% { background-position: 0 50%; }
-}
-@keyframes nudgeText
-{
-  0% { transform: translateY(0); }
-  20% { transform: translateY(2px); }
-  30% { transform: translateY(0); }
-  50% { transform: translateY(2px); }
-  60% { transform: translateY(0); }
-  80% { transform: translateY(2px); }
-  90% { transform: translateY(0); }
-}
-.page-title
-{
-  animation: textAnim 5s ease-out infinite, nudgeText 5s ease-out infinite !important;
-  background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
-  background-size: 250% 500%;
-  background-clip: text;
-  -webkit-background-clip: text;  
-  -webkit-text-fill-color: transparent;
-  margin-bottom: 10px !important;
-}
-
-/* 코드 블럭 - Container 영역 */
+/*
+  코드 블럭 - Container 영역
+*/
 div[class^="CodeBlock_container"]
 {
   border-radius: 20px !important;
@@ -171,6 +8,7 @@ div[class^="CodeBlock_container"]
   background-color: #282C34 !important;
   margin-bottom: 12px !important;
 }
+
 div[class^="CodeBlock_code"]:before
 {
   content: "•••";
@@ -191,21 +29,30 @@ div[class^="CodeBlock_code"]:before
   top: 12px;
   left: 15px;
 }
-/* 코드 블럭 - Code 영역 */
+
+/*
+  코드 블럭 - Code 영역
+*/
 div[class^="CodeBlock_code"]
 {
   padding-top: 44px !important;
   padding-bottom: 25px !important;
   color: #ABB2BF !important;
 }
-/* 코드 블럭 - Language 영역 */
+
+/*
+  코드 블럭 - Language 영역
+*/
 div[class^="CodeBlock_language"]
 {
   top: 15px !important;
   left: 0px !important;
   right: 15px;
 }
-/* 코드 블럭 - Caption 영역 */
+
+/*
+  코드 블럭 - Caption 영역
+*/
 div[class^="CodeBlock_container"]
 > :nth-child(2)
 {
@@ -220,7 +67,10 @@ div[class^="CodeBlock_container"]
   padding: 0 !important;
   font-weight: 700;
 }
-/* 코드 블럭 - Caption 내부 영역 */
+
+/*
+  코드 블럭 - Caption 내부 영역
+*/
 div[class^="CodeBlock_container"]
 > :nth-child(2)
 > div
@@ -229,7 +79,7 @@ div[class^="CodeBlock_container"]
 }
 
 /*
-* 코드블럭 코드 키워드 색상
+  코드블럭 - 코드 키워드 색상
 */
 /* 🔴 빨간색 */
 .notion-code-block span[class="token script language-javascript tag"],
@@ -370,22 +220,4 @@ div[class^="CodeBlock_container"]
 /* 🎨 배경 투명색 */
 .notion-code-block span[class="token operator interpolation template-string script language-javascript tag"] {
   background-color: transparent !important;
-}
-
-/* 화면 등장 fadeUp 애니메이션 */
-@keyframes fadeUp {
-  from {
-    transform: translateY(50px);
-    opacity: 0;
-  }
-  to {
-    transform: translateY(0);
-    opacity: 1;
-  }
-}
-.notion-frame > .notion-scroller {
-  transform: translateY(50px);
-  opacity: 0;
-  animation: 400ms ease fadeUp;
-  animation-fill-mode: forwards;
 }

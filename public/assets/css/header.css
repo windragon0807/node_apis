@@ -1,0 +1,26 @@
+/*
+  상단 sticky 헤더
+*/
+.notion-header
+{
+  /* fixed = absolute + sticky */
+  position: fixed !important;
+  width: 90% !important;
+  align-self: center !important;
+  top: 15px !important;
+  border-radius: 20px !important;
+  filter: drop-shadow(0px 6px 5px rgba(0, 0, 0, 0.15));
+  box-shadow: inset 0px -12px 30px rgba(255, 255, 255, 0.8),
+    inset 0px -5px 20px rgba(0, 0, 0, 0.25);
+  background: rgba(255, 255, 255, 0.75);
+}
+
+.notion-topbar
+{
+  border-radius: 20px !important;
+}
+
+.scroll-progress-bar
+{
+  display: none;
+}

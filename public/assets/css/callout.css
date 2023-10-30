@@ -1,0 +1,19 @@
+/*
+  콜아웃
+*/
+.notion-callout-block
+{
+  border: 2px solid transparent;
+  border-radius: 15px !important;
+  background:
+    linear-gradient(90deg, rgba(255, 255, 255, 0.95), rgba(255, 255, 255, 0.95)) padding-box,
+    linear-gradient(90deg, #FDDE5C, #F8AB5E, #F56A62, #A176C8, #759BEB, #65BEB3, #70DB96) border-box
+    !important;
+  filter: drop-shadow(0px 3px 3px rgba(0, 0, 0, 0.15));
+  margin-bottom: 10px !important;
+}
+
+.notion-callout-block *
+{
+  background-color: transparent !important;
+}
