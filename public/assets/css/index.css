@@ -25,6 +25,6 @@
   90% { transform: translateY(0); }
 }
 
-body {
-  font-family: "Maplestory", sans-serif !important;
+* {
+  font-family: "Maplestory" !important;
 }
