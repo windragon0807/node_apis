@@ -9,7 +9,7 @@ div[class^="CodeBlock_container"]
   margin-bottom: 12px !important;
 }
 
-div[class^="CodeBlock_code"]:before
+/* div[class^="CodeBlock_code"]:before
 {
   content: "•••";
   color: transparent;
@@ -28,7 +28,22 @@ div[class^="CodeBlock_code"]:before
   position: absolute;
   top: 12px;
   left: 5px;
-}
+} */
+
+/*
+  코드 블럭 - Apple 디자인 영역
+*/
+div[class^="CodeBlock_left"]
+  {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    width: 12px;
+    height: 12px;
+    background: #fc625d;
+    border-radius: 50%;
+    box-shadow: 20px 0 #fdbc40, 40px 0 #35cd4b;
+  }
 
 /*
   코드 블럭 - Code 영역

@@ -11,7 +11,6 @@ const output = cssFiles
     return fs.readFileSync(filePath, "utf-8");
   })
   .join("\n");
-
 router.get("/css", (_, res: Response) => {
   res.set("Content-Type", "text/css");
   res.send(output);
@@ -28,6 +27,13 @@ router.get("/font", (_, res: Response) => {
     res.set("Content-Type", "text/plain");
     res.status(404).send("Not Found");
   });
+});
+
+const jsPath = path.join(process.cwd(), "/public/assets/javascript/codeBlock.js");
+const jsFile = fs.readFileSync(jsPath, "utf-8");
+router.get("/js", (_, res: Response) => {
+  res.set("Content-Type", "text/javascript");
+  res.send(jsFile);
 });
 
 export default router;
