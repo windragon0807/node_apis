@@ -4,7 +4,7 @@ import fs from "fs";
 
 const router = express.Router();
 
-const cssFiles = ["callout", "codeBlock", "header", "image", "index", "page"];
+const cssFiles = ["index", "callout", "codeBlock", "header", "image", "page"];
 const output = cssFiles
   .map((fileName) => {
     const filePath = path.join(process.cwd(), `/public/assets/css/${fileName}.css`);

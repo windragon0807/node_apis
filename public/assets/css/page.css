@@ -98,24 +98,6 @@ div[class*="header-block"] h4
 /*
   페이지 타이틀
 */
-@keyframes textAnim
-{
-  0% { background-position: 0 50%; }
-  50% { background-position: 100% 50%; }
-  100% { background-position: 0 50%; }
-}
-
-@keyframes nudgeText
-{
-  0% { transform: translateY(0); }
-  20% { transform: translateY(2px); }
-  30% { transform: translateY(0); }
-  50% { transform: translateY(2px); }
-  60% { transform: translateY(0); }
-  80% { transform: translateY(2px); }
-  90% { transform: translateY(0); }
-}
-
 .page-title
 {
   animation: textAnim 5s ease-out infinite, nudgeText 5s ease-out infinite !important;

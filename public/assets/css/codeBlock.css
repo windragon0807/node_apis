@@ -50,6 +50,22 @@ div[class^="CodeBlock_language"]
   right: 15px;
 }
 
+div[class^="CodeBlock_content"] {
+  animation: textAnim 5s ease-out infinite, nudgeText 5s ease-out infinite !important;
+  background: linear-gradient(-45deg, #5FAAE8, #00DADF, #A4F68F, #F9F871);
+  background-size: 250% 500%;
+  background-clip: text;
+  -webkit-background-clip: text;  
+  -webkit-text-fill-color: transparent;
+}
+
+/*
+  코드 블럭 - Copy 영역
+*/
+div[class^="CodeBlock_right"] {
+  display: none !important;
+}
+
 /*
   코드 블럭 - Caption 영역
 */
