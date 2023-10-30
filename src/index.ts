@@ -8,18 +8,11 @@ import apiRouter from "./routes/api";
 
 const app = express();
 
-const allowList = ["https://app.oopy.io/script", "https://ryong.oopy.io/"];
-const corsOptions = {
-  origin: (origin: any, callback: any) => {
-    if (allowList.indexOf(origin) !== -1) {
-      callback(null, true);
-    } else {
-      callback(new Error("Not allowed by CORS"));
-    }
-  },
-  credentials: true,
-};
-app.use(cors(corsOptions));
+app.use(
+  cors({
+    origin: "*",
+  })
+);
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(compression());
