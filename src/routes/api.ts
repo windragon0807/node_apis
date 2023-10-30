@@ -13,16 +13,21 @@ const output = cssFiles
   .join("\n");
 
 router.get("/css", (_, res: Response) => {
-  // res.sendFile(path.join(process.cwd(), "/public/assets/css/index.css"));
   res.set("Content-Type", "text/css");
   res.send(output);
 });
 
 const fontPath = path.join(process.cwd(), "/public/assets/fonts/Maplestory.woff");
-const font = fs.readFileSync(fontPath);
 router.get("/font", (_, res: Response) => {
-  res.set("Content-Type", "application/octet-stream");
-  res.send(font);
+  const stream = fs.createReadStream(fontPath);
+  stream.on("open", () => {
+    res.set("Content-Type", "application/font-woff");
+    stream.pipe(res);
+  });
+  stream.on("error", (err) => {
+    res.set("Content-Type", "text/plain");
+    res.status(404).send("Not Found");
+  });
 });
 
 export default router;
