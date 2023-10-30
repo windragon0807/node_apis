@@ -9,27 +9,6 @@ div[class^="CodeBlock_container"]
   margin-bottom: 12px !important;
 }
 
-/* div[class^="CodeBlock_code"]:before
-{
-  content: "•••";
-  color: transparent;
-  background-image: linear-gradient(
-    90deg,
-    #FF5F56, #FF5F56 37%,
-    #FFBD2E 33%, #FFBD2E 66%,
-    #27C93F 66%, #27C93F
-  );
-  background-clip: text;
-  -webkit-background-clip: text;
-  font-size: 50px;
-  width: 75px;
-  letter-spacing: -25px;
-  line-height: 0.5;
-  position: absolute;
-  top: 12px;
-  left: 5px;
-} */
-
 /*
   코드 블럭 - Apple 디자인 영역
 */
